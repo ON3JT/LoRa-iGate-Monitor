@@ -16,15 +16,18 @@ Back home, I emailed the site owner asking how he had created this and if I coul
 ## Changes in is-cfg.json
 You have to activate the syslog function on your igate by modifying this entry :
 
-```
+```JSON
  	"syslog": {
 		"active": true,              activate this
 		"server": "192.168.1.56",    ip adress from my ESP32
 		"port": 4210                 port where the ESP32 listens to
 	}
 ```
+I know that the port was 514, but 4210 was from an Arduino UDP example and I continued using this :-).
 
 # Resources
-
+## Disclaimer
+All this code is for demonstration purposes only. It should not be considered safe and bug-free. I cannot be held liable for any damage or loss using this code. 
+It can be improved and you can do so at your own discretion.
 
 ******
