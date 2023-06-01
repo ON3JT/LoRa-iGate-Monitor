@@ -23,7 +23,8 @@ You have to activate the syslog function on your igate by modifying this entry :
 		"port": 4210                 port where the ESP32 listens to
 	}
 ```
-I know that the port was 514, but 4210 was from an Arduino UDP example and I continued using this :-).
+I know that the port was 514, but 4210 was from an Arduino UDP example and I continued using this :-).  
+It is recommended to provide the ESP32 with a fixed IP address in your network. I do this using a DHCP reservation on the MAC address of the controller.
 
 # Resources
 ## Disclaimer
