@@ -9,10 +9,20 @@ The link : https://aprs.prgm.org/lora-aprs/db0lj.php
 
 Back home, I emailed the site owner asking how he had created this and if I could use some of the code. Unfortunately, the code was not usable but I now had a direction I could work towards.
 
-# Screenshots
+## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
+## Changes in is-cfg.json
+You have to activate the syslog function on your igate by modifying this entry :
+
+```
+ 	"syslog": {
+		"active": true,              activate this
+		"server": "192.168.1.56",    ip adress from my ESP32
+		"port": 4210                 port where the ESP32 listens to
+	}
+```
 
 # Resources
 
