@@ -26,6 +26,27 @@ You have to activate the syslog function on your igate by modifying this entry :
 I know that the port was 514, but 4210 was from an Arduino UDP example and I continued using this :-).  
 It is recommended to provide the ESP32 with a fixed IP address in your network. I do this using a DHCP reservation on the MAC address of the controller.
 
+## Database
+```MYSQL
+CREATE TABLE `igate_data` (
+	`call` TINYTEXT NULL DEFAULT NULL COLLATE 'latin1_general_ci',
+	`date` DATE NULL DEFAULT NULL COLLATE 'armscii8_bin',
+	`time` TIME NULL DEFAULT NULL,
+	`destination` TINYTEXT NULL DEFAULT NULL COLLATE 'latin1_general_ci',
+	`path` TINYTEXT NULL DEFAULT NULL COLLATE 'latin1_general_ci',
+	`rssi` SMALLINT(6) NULL DEFAULT '0',
+	`signal` TINYTEXT NULL DEFAULT NULL COLLATE 'latin1_general_ci',
+	`snr` DECIMAL(20,2) NULL DEFAULT NULL,
+	`payload` TEXT NULL DEFAULT NULL COLLATE 'latin1_general_ci',
+	`latitude` DECIMAL(20,6) NULL DEFAULT NULL,
+	`longitude` DECIMAL(20,6) NULL DEFAULT NULL,
+	`distance` DECIMAL(20,2) NULL DEFAULT NULL
+)
+COLLATE='latin1_general_ci'
+ENGINE=InnoDB
+;
+```
+
 # Resources
 ## Disclaimer
 All this code is for demonstration purposes only. It should not be considered safe and bug-free. I cannot be held liable for any damage or loss using this code. 
