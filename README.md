@@ -9,9 +9,18 @@ The link : https://aprs.prgm.org/lora-aprs/db0lj.php
 
 Back home, I emailed the site owner asking how he had created this and if I could use some of the code. Unfortunately, the code was not usable but I now had a direction I could work towards.
 
-## Screenshots
+# Flows
+There are essentialy two flows :  
+- getting the data from the igate into the database
+- viewing everything on a webpage
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+## Flow 1
+
+![Flow 1](Images/flow_1.jpg)
+
+## Flow 2
+![Flow 2](Images/flow_2.jpg)
+
 
 ## Changes in is-cfg.json
 You have to activate the syslog function on your igate by modifying this entry :
