@@ -154,7 +154,7 @@ bool IsCompressed(String val)
 void ParseUploadData(String val)
 {
   // example of val = <7>1 - ON3JT-10 ModemTask - - - ﻿[10:09:04] Received packet 'Source: ON3JT-9, Destination: APRS, Path: WIDE1-1, Type: Position Without Timestamp, Data: !5110.54NL00427.83E>147/011/A=-00014 Sats = 9 | LoRa Test' with RSSI -84dBm, SNR 10.00dB and FreqErr 3909Hz
-  StaticJsonDocument<350> root;
+  StaticJsonDocument<450> root;
   
   
   root["secret"] = SECRET;
@@ -200,7 +200,6 @@ void ParseUploadData(String val)
   float Lat = 0;
   float Lon = 0;
   if (IsCompressed(RawData))
-  //if (RawData[1] == '/' || RawData[1] == '\\')
   {
     Lat = GetLatCompressed(RawData);
     Lon = GetLonCompressed(RawData);

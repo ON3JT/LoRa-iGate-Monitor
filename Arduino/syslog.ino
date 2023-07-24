@@ -2,8 +2,7 @@
 
 WiFiUDP UDP;
 
-char packet[300];
-//char Task[] = "ModemTask";
+char packet[450];
 char Task[] = "RadiolibTask";
 
 String APRSdata ="";
@@ -25,14 +24,14 @@ void MonitorUDP()
     if (len > 0)
     {
       packet[len] = '\0';
-     // Serial.print("[Raw] : ");
-     // Serial.println(packet);
       
       if (strstr (packet, Task))
       {
-        //if(!strstr (packet, "failed") || !strstr(packet,"Transmitting") || !strstr(packet, "TX done"))
         if(strstr (packet, "Received packet"))
         {
+           Serial.print("[Raw] : ");
+           Serial.println(packet);
+     
           Serial.println("[UDP] : UDP Packet Received.");
           digitalWrite(LED_BUILTIN, HIGH);
           delay(100);
